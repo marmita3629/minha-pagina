@@ -15,5 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 console.log("Página carregada com sucesso e animações aplicadas!");
-// so para ver se vai
+
 
