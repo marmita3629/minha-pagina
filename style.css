@@ -113,9 +113,9 @@ header {
 }
 
 .honra img {
-  width: 120px;
-  height: 120px;
-  border-radius: 15px;
+  width: 150px;
+  height: 170px;
+  border-radius: 20px;
   object-fit: cover;
   margin-bottom: 10px;
 }
