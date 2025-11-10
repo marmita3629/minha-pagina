@@ -1,6 +1,6 @@
 // Efeito de zoom nas imagens das menções honrosas
 document.addEventListener("DOMContentLoaded", () => {
-  const honraImages = document.querySelectorAll(".honra img");
+  const honraImages = document.querySelectorAll(".honra img, .card img, .icons img");
 
   honraImages.forEach(img => {
     img.addEventListener("mouseenter", () => {
