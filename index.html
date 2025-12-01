@@ -1,84 +1,153 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minha Página</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Página</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <div class="header-content">
-      <h1>アンドレ <span>Minha página</span></h1>
-      <div class="icons">
-        <a href="https://wa.me/5541988918146" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-        </a>
-        <a href="https://www.instagram.com/japones_andre/" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-        </a>
-      </div>
-    </div>
-  </header>
+  <header>
+    <div class="header-content">
+      <h1>アンドレ <span>Minha página</span></h1>
+      <div class="icons">
+        <a href="https://wa.me/5541988918146" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/japones_andre/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+      </div>
+    </div>
+  </header>
 
-  <section class="hero">
-    <img src="paisagem.jpg" alt="Paisagem japonesa">
-    <div class="hero-text">
-      <h2>MEUS PROJETOS FUTUROS</h2>
-    </div>
-  </section>
+  <section class="hero">
+    <img src="paisagem.jpg" alt="Paisagem japonesa">
+    <div class="hero-text">
+      <h2>MEUS PROJETOS FUTUROS</h2>
+    </div>
+  </section>
 
-  <section class="futuro">
-    <h2>Coisas que gostaria de ser no futuro</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="atleta_volei.avif" alt="Vôlei">
-        <p>atleta de<br>volei</p>
-      </div>
-      <div class="card">
-        <img src="tecnico_ti.jpg" alt="Técnico TI">
-        <p>tecnico de<br>TI</p>
-      </div>
-      <div class="card">
-        <img src="engenheiro_eletrico.webp" alt="Engenheiro">
-        <p>engenheiro eletrico</p>
-      </div>
-    </div>
-  </section>
+  <section class="tabs-container">
+    <h2>Coisas que gostaria de ser no futuro</h2>
+    
+    <div class="tab-buttons">
+      <button class="tab-button active" onclick="openTab(event, 'SobreMim')">Sobre Mim</button>
+      <button class="tab-button" onclick="openTab(event, 'MinhaTurma')">Minha Turma</button>
+      <button class="tab-button" onclick="openTab(event, 'MeuFuturo')">Meu Futuro</button>
+    </div>
 
-  <section class="honrarias">
-    <h2>Menções honrosas para:</h2>
-    <div class="honra-cards">
-      <div class="honra">
-        <img src="andre_havaiano.jpeg" alt="André havaiano">
-        <p><strong>desenvolvedor</strong><br>andré havaiano</p>
-      </div>
-      <div class="honra">
-        <img src="andre_normal.jpeg" alt="André normal">
-        <p><strong>designer</strong><br>andré normal</p>
-      </div>
-      <div class="honra">
-        <img src="andre_mandrake.jpeg" alt="André mandrake">
-        <p><strong>administrador</strong><br>andré mandrake</p>
-      </div>
-    </div>
-  </section>
+        <div id="MeuFuturo" class="content-tab">
+      <div class="cards">
+        <div class="card">
+          <img src="atleta_volei.avif" alt="Vôlei">
+          <p>atleta de<br>volei</p>
+        </div>
+        <div class="card">
+          <img src="tecnico_ti.jpg" alt="Técnico TI">
+          <p>tecnico de<br>TI</p>
+        </div>
+        <div class="card">
+          <img src="engenheiro_eletrico.webp" alt="Engenheiro">
+          <p>engenheiro eletrico</p>
+        </div>
+      </div>
+    </div>
 
-  <footer>
-    <div class="footer-content">
-      <div class="footer-text">
-        <p>アンドレ</p>
-        <p>Mais informações, não entre em contato 📞 
-          <a href="https://wa.me/5541988918146" target="_blank">+55 41 98891-8146</a>
-        </p>
-        <small>© 2024–2025 | Curso de ADS | Todos os direitos reservados a andré@2025</small><br>
-        <small>Política de Privacidade | Proteção de dados | Encarregado de dados</small>
-      </div>
-    </div>
-  </footer>
+        <div id="SobreMim" class="content-tab" style="display:none;">
+      <div class="sobre-mim-text">
+        <h3>Um Pouco Sobre Mim</h3>
+        <p>Olá! Meu nome é André e sou apaixonado por tecnologia, esportes e cultura japonesa. Atualmente, estou focado em meus estudos em Análise e Desenvolvimento de Sistemas. Meus planos futuros incluem me aprofundar nas áreas de TI e Engenharia Elétrica, além de manter o vôlei como um hobby importante. Acredito que a dedicação e a multidisciplinaridade são a chave para o sucesso em qualquer área.</p>
+      </div>
+    </div>
 
-  <script src="script.js"></script>
+        <div id="MinhaTurma" class="content-tab" style="display:none;">
+      <div class="turma-grid">
+                <div class="turma-slot">
+          <img src="placeholder-turma.jpg" alt="Colega de Turma 1">
+          <p class="descricao-turma">Descrição do Colega 1</p>
+        </div>
+                <div class="turma-slot">
+          <img src="placeholder-turma.jpg" alt="Colega de Turma 2">
+          <p class="descricao-turma">Descrição do Colega 2</p>
+        </div>
+                <div class="turma-slot">
+          <img src="placeholder-turma.jpg" alt="Colega de Turma 3">
+          <p class="descricao-turma">Descrição do Colega 3</p>
+        </div>
+                <div class="turma-slot">
+          <img src="placeholder-turma.jpg" alt="Colega de Turma 4">
+          <p class="descricao-turma">Descrição do Colega 4</p>
+        </div>
+                <div class="turma-slot">
+          <img src="placeholder-turma.jpg" alt="Colega de Turma 5">
+          <p class="descricao-turma">Descrição do Colega 5</p>
+        </div>
+                <div class="turma-slot">
+          <img src="placeholder-turma.jpg" alt="Colega de Turma 6">
+          <p class="descricao-turma">Descrição do Colega 6</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="honrarias">
+    <h2>Menções honrosas para:</h2>
+    <div class="honra-cards">
+      <div class="honra">
+        <img src="andre_havaiano.jpeg" alt="André havaiano">
+        <p><strong>desenvolvedor</strong><br>andré havaiano</p>
+                <div class="social-icons">
+          <a href="#" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+          </a>
+          <a href="#" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook">
+          </a>
+        </div>
+      </div>
+      <div class="honra">
+        <img src="andre_normal.jpeg" alt="André normal">
+        <p><strong>designer</strong><br>andré normal</p>
+        <div class="social-icons">
+          <a href="#" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+          </a>
+          <a href="#" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook">
+          </a>
+        </div>
+      </div>
+      <div class="honra">
+        <img src="andre_mandrake.jpeg" alt="André mandrake">
+        <p><strong>administrador</strong><br>andré mandrake</p>
+        <div class="social-icons">
+          <a href="#" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+          </a>
+          <a href="#" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="Facebook">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-text">
+        <p>アンドレ</p>
+        <p>Mais informações, não entre em contato 📞 
+          <a href="https://wa.me/5541988918146" target="_blank">+55 41 98891-8146</a>
+        </p>
+        <small>© 2024–2025 | Curso de ADS | Todos os direitos reservados a andré@2025</small><br>
+        <small>Política de Privacidade | Proteção de dados | Encarregado de dados</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
