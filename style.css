@@ -148,10 +148,13 @@ text-align: left;
  color: #333;
 }
 
-/* Conteúdo 'Minha Turma' */
+/* ... (Código anterior do style.css) ... */
+
+/* Conteúdo 'Minha Turma' - Layout 3 Colunas (3x3 com 6 itens na verdade fica 3x2) */
 .turma-grid {
  display: grid;
- grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+ /* 3 colunas fixas para telas maiores */
+ grid-template-columns: repeat(3, 1fr);
  gap: 30px;
  max-width: 1000px;
  margin: 0 auto;
@@ -178,6 +181,23 @@ text-align: left;
  font-weight: 500;
  color: #555;
 }
+
+/* Responsividade para o grid da turma */
+@media (max-width: 768px) {
+    .turma-grid {
+        /* Volta para 2 colunas em tablets */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .turma-grid {
+        /* 1 coluna em smartphones */
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ... (Restante do código do style.css) ... */
 
 
 /* SEÇÃO HONRARIAS (Mantenho o que está, adicionando o estilo de ícones) */
@@ -209,16 +229,6 @@ text-align: left;
  margin-bottom: 10px;
 }
 
-.social-icons {
- margin-top: 10px;
-}
-
-.social-icons img {
- width: 24px;
- height: 24px;
- margin: 0 5px;
- border-radius: 0; /* Remove o border-radius para ícones pequenos */
-}
 
 /* FOOTER */
 footer {
