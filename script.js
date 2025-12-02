@@ -18,10 +18,10 @@ function openTab(evt, tabName) {
   evt.currentTarget.className += " active";
 }
 
-// Inicializa a página mostrando o conteúdo de 'MeuFuturo'
+// Inicializa a página mostrando o conteúdo de 'Sobre mim'
 document.addEventListener("DOMContentLoaded", () => {
 
-  document.getElementById("MeuFuturo").style.display = "block";
+  document.getElementById("SobreMim").style.display = "block";
   document.querySelector(".tab-button:nth-child(3)").classList.add("active");
   
 
