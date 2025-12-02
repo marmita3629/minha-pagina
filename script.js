@@ -20,7 +20,6 @@ function openTab(evt, tabName) {
 
 // Inicializa a página mostrando o conteúdo de 'Sobre mim'
 document.addEventListener("DOMContentLoaded", () => {
-
   document.getElementById("SobreMim").style.display = "block";
   document.querySelector(".tab-button:nth-child(3)").classList.add("active");
   
